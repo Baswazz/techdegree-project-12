@@ -1,0 +1,37 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+  padding-top: em(54px);
+  @include e(item) {
+    a {
+      display: block;
+      text-align: center;
+      padding: em(13px);
+      border-radius: $br--default;
+      color: palette(grey, dark);
+      transition: background-color $transition-duration;
+      font-weight: $font-weight--regular;
+      text-decoration: none;
+      &:hover {
+        background-color: $color-primary;
+        color: $white;
+      }
+
+      @include mediaq(medium) {
+        padding: em(9px);
+      }
+    }
+    
+    @include mediaq(medium) {
+      margin-right: em(12px);
+      margin-left: em(12px);
+    }
+  }
+
+  @include mediaq(medium) {
+    @include flexbox(row, center);
+    align-items: center;
+  }
+}

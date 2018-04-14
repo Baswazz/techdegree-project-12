@@ -1,0 +1,30 @@
+// Font Stacks
+$font-url-google      : 'https://fonts.googleapis.com/css?family=Rubik:300,400,500,700';
+$font-family-primary  : 'Rubik', sans-serif;
+
+$font-weight-light    : 300;
+$font-weight-regular  : 400;
+$font-weight-semibold : 500;
+$font-weight-bold     : 700;
+
+// Descriptive Base Colors
+$white : #fff;
+$black : #000;
+$grey  : #212121;
+
+$prupleHeart : #673ab7;
+
+// Color Usage
+$color-primary : $prupleHeart;
+$color-text    : #333;
+
+// Breakpoints
+$breakpoint-medium : 768px;
+$breakpoint-large  : 1024px;
+$breakpoint-xlarge : 1200px;
+
+// Border Radius
+$border-radius : 5px;
+
+// Transitions
+$transition-duration : .3s;

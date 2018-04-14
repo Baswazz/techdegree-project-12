@@ -1,0 +1,90 @@
+/* =================================
+  Base Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em 1em;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery a {
+  flex-basis: calc(50% - 2em);
+  margin: 1em;
+}
+
+.gallery img {
+
+}
+
+/* ---- Form Styles  ---- */
+input {
+  width: 100%;
+  border: 2px solid #E0E0E0;
+  padding: 10px 15px;
+  transition: .3s;
+  border-radius: 5px;
+  font-family: 'Muli', sans-serif;
+}
+
+input:focus {
+  border: 2px solid #BDBDBD;
+  background-color: #F5F5F5;
+  outline: none;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 480px) {
+  .gallery a {
+    flex-basis: calc(33.333333333% - 2em);
+  }
+}
+
+@media (min-width: 768px) {
+  .search {
+    padding: 3em 2em 1em;
+  }
+
+  .search input {
+    max-width: 50%;
+  }
+
+  .gallery a {
+    flex-basis: calc(25% - 4em);
+    margin: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Registration Form</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1><a href="#">The Code Review</a></h1>
+  </header>
+
+  <div class="container">
+
+    <div class="form-header">
+      <h2>Signup for our newsletter</h2>
+      <p>Get the latest news on how your code is doing right in your inbox</p>
+    </div>
+
+    <form action="index.html" method="post">
+
+      <fieldset>
+        <legend>Contact information</legend>
+
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="user_name" placeholder="Required" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="user_email" placeholder="Required" required>
+        </div>
+
+        <div class="input-group">
+          <label for="tel">Phone Number</label>
+          <input type="tel" id="tel" name="user_tel" placeholder="023 531 2272">
+        </div>
+
+        <div class="input-group">
+          <label for="address">Street address</label>
+          <input type="text" id="address" name="user_address" placeholder="Koediefslaan 82">
+        </div>
+
+        <div class="input-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="user_city" placeholder="Heemstede">
+        </div>
+
+        <div class="input-group">
+          <label for="state">State</label>
+          <select id="state" name="user_state">
+            <option value="" selected hidden disabled>Choose State</option>
+            <option value="indiana">Indiana</option>
+            <option value="new_york">New York</option>
+            <option value="texas">Texas</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="zipcode">Zip Code</label>
+          <input type="text" id="zipcode" name="user_zipcode" placeholder="2101 BX">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Newsletter</legend>
+
+        <label>Select the newsletters you would like to recieve</label>
+        <div class="spacer">
+          <input type="checkbox" id="html_news" value="html_news" name="user_subscription_html"><label class="inline" for="html_news">HTML News</label><br>
+          <input type="checkbox" id="css_news" value="css_news" name="user_subscription_css"><label class="inline" for="css_news">CSS News</label><br>
+          <input type="checkbox" id="javascript_news" value="javascript_news" name="user_subscription_javascript"><label class="inline" for="javascript_news">Javascript News</label><br>
+        </div>
+
+        <label>Newsletter format</label>
+        <div class="spacer">
+          <input type="radio" id="html" value="html" name="format"><label class="inline" for="html">HTML</label><br>
+          <input type="radio" id="plain_text" value="plain_text" name="format"><label class="inline" for="plain_text">Plain text</label>
+        </div>
+
+        <label for="extra">Other topics you'd like to hear about</label>
+        <textarea id="extra" name="user_extra" rows="4"></textarea>
+      </fieldset>
+
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+
+  </div> <!-- end container -->
+
+  <footer class="main-footer">
+    <p>Copyright The Code Review</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+// ==========================================================================
+// Base styles
+// ==========================================================================
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-light;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: $color-text;
+}
+
+p { margin-bottom: 1.3rem; }
+
+h1, h2, h3, h4 {
+  margin: 1.414rem 0 0.5rem;
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157rem;
+}
+
+h2 { font-size: 2.369rem; }
+h3 { font-size: 1.777rem; }
+h4 { font-size: 1.333rem; }
+
+small, .font_small { font-size: 0.75rem; }
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  opacity: 1;
+  transition: $transition-duration;
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: .6;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  opacity: 1;
+  transition: $transition-duration ease;
+}
+
+// ==========================================================================
+// Base layout styles
+// ==========================================================================
+
+.container {
+  padding: 0 1em;
+  @media (min-width: $breakpoint-large) {
+    width: 90%;
+    max-width: $breakpoint-large;
+    margin: 0 auto;
+  }
+}
+
+.content-wrapper {
+  text-align: center;
+  @media (min-width: $breakpoint-large) {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+.main-header {
+  background: $color-primary url('../img/header.jpg') 50% 0 no-repeat fixed;
+  background-size: cover;
+  color: $white;
+  margin-bottom: .5rem;
+  .header-wrapper {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    @media (min-width: $breakpoint-large) {
+      padding: 12rem 10%;
+    }
+  }
+}
+
+.logo {
+  font-weight: $font-weight-semibold;
+}
+
+.main-nav {
+  padding: 1rem;
+  z-index: 10;
+  @media (min-width: $breakpoint-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    &.active {
+      a {
+        color: $color-primary;
+      }
+    }
+    @media (min-width: $breakpoint-medium) {
+      display: inline-block;
+      margin-right: auto;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 5px 2rem;
+    text-transform: uppercase;
+    font-weight: $font-weight-semibold;
+    color: $white;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &.scroll {
+    background-color: $white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    a {
+      color: $color-text;
+    }
+  }
+}
+
+.portfolio,
+.about,
+.contact {
+  padding: 2rem 0;
+  @media (min-width: $breakpoint-medium) {
+    padding: 4rem 0;
+  }
+}
+
+.portfolio {
+  background-color: #f9fafe;
+  text-align: center;
+}
+
+.about { text-align: center; }
+
+.contact {
+  text-align: center;
+  background-color: #212121;
+  color: $white;
+}
+
+.social-menu {
+  list-style: none;
+  margin: 4rem 0 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 .8rem;
+  }
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.main-footer {
+  padding: 1rem;
+  background-color: $grey;
+  color: $white;
+  a {
+    color: $white;
+  }
+}
+
+// ==========================================================================
+// Components
+// ==========================================================================
+
+.btn {
+  padding: 1rem 2rem;
+  color: $white;
+  border: 2px solid $white;
+  border-radius: $border-radius;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: $font-weight-semibold;
+  margin-top: 2rem;
+  transition: $transition-duration;
+  min-width: 12.5rem;
+  &:hover {
+    background-color: $white;
+    color: $color-text;
+    opacity: 1;
+  }
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  border-radius: $border-radius;
+  background-color: $white;
+  height: 100%;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .1);
+  &-image {
+    position: relative;
+  }
+  &-body {
+    padding: 1rem;
+  }
+  a {
+    &:hover {
+      display: block;
+    }
+  }
+  img {
+    margin-bottom: 0;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white, .75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s;
+    &:hover {
+      opacity: 1;
+    }
+    a {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+    }
+    .link-icon {
+      fill: $white;
+    }
+  }
+  .subtitle {
+    color: lighten($black, 60%);
+    margin: 0 0 .5rem;
+    font-weight: $font-weight-regular;
+  }
+  .info {
+    color: $color-primary;
+    margin-bottom: .5rem;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.social-icon {
+  fill: $white;
+  width: 1.5rem;
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  padding: .5rem;
+  text-align: left;
+  @media (min-width: $breakpoint-medium) {
+      width: 50%;
+  }
+  @media (min-width: $breakpoint-xlarge) {
+      width: 33.333333333%;
+  }
+}

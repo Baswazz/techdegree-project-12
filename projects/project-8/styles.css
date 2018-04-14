@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #111;
+  background: #edeff0 url('svgs/background.svg') center center repeat;
+}
+
+#container {
+  max-width: 960px;
+  background: #fff;
+  margin: 0 auto;
+  height: 100%; /* new line */
+}
+
+p {
+  max-width: 350px;
+  margin: 35px auto 0;
+  line-height: 2em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #39add1;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #111;
+}
+
+nav ul {
+  margin: 0;
+  padding: 1em 2em;
+}
+
+header {
+  padding-top: 10px;
+}
+
+header nav {
+  padding-bottom: 50px;
+  text-align: left;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+main {
+  padding-top: 50px;
+}
+
+main h2 {
+  font-size: 28px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  color: #ba8058;
+}
+
+/* SVG Styles */
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+.nav-icon {
+  height: 14px;
+  width: 20px;
+  transform-origin: 50% 50%;
+  transition: transform .2s ease-out;
+}
+
+header nav ul li a .nav-icon {
+  fill: #39add1;
+}
+
+header nav ul li a:hover .nav-icon {
+  fill: #b97f5b;
+  animation: grow 1s ease-out backwards;
+}
+
+.logo {
+  width: 140px;
+  height: 120px;
+}
+
+.logo-text {
+  display: none;
+}
+
+.logo-icon {
+  /* transform-origin: 50% 50%; */
+  transform-origin: 70.4px 69.9px;
+  transition: transform .4s ease-out;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(35deg) scale(0.9);
+}
+
+.logo-small {
+  display: block;
+}
+
+.corgi {
+  display: inline-block;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: #ba8058;
+}
+
+.corgi p {
+  margin-top: 0;
+  margin-left: 25%;
+}
+
+.corgi-sable { color: #b97f5b; }
+.corgi-fawn { color: #e9aa82; }
+.corgi-red { color: #834b29; }
+.corgi-stone { color: #52595e; }
+
+@media (min-width: 425px) {
+  .logo-text {
+    display: block;
+  }
+  .logo-small {
+    display: none;
+  }
+}

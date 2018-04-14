@@ -1,0 +1,42 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+body {
+  font-size: $base__font-size;
+  font-family: $font-family--primary;
+  font-weight: $font-weight--regular;
+  line-height: ($base__line-height/$base__font-size);
+  color: palette(grey);
+}
+
+.link {
+  color: $color-secondary;
+  font-weight: $font-weight--bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Headings
+
+.headline {
+  @include m(primary) {
+    @extend %headline-primary;
+  }
+  @include m(secondary) {
+    @extend %headline-secondary;
+  }
+}
+
+// Blockquote
+
+.blockquote {
+  font-size: em(26px);
+  font-style: italic;
+  border-left: 9px solid $color-primary;
+  border-radius: $br--default;
+  padding-left: em(16px);
+  line-height: (32px/26px);
+}

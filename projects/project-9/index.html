@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo"><strong>Your</strong>App</h1>
+        <ul>
+            <li>
+                <a href="#" class="dropdown">
+                    <img src="icons/icon-bell.svg" alt="Notifications">
+                    <i class="dot"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Notification 1</a></li>
+                    <li><a href="#">Notification 2</a></li>
+                    <li><a href="#">Notification 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><img class="avatar rounded" src="img/50.jpg" alt="Profile"> Josh Sullivan</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="wrapper">
+        <nav class="nav">
+            <ul>
+                <li>
+                    <button class="active">
+                        <img src="icons/icon-dashboard.svg" alt="Dashboard">                          
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="icons/icon-members.svg" alt="Members">
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="icons/icon-visits.svg" alt="Visits">
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="icons/icon-settings.svg" alt="Settings">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <div class="nav-tabs">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                </ul>
+                <input type="search" placeholder="Search">
+            </div>
+
+            <!-- Traffic -->
+            <div class="row">
+                <section class="col-1">
+                    <div class="alert">
+                        <strong>Alert</strong> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur brlandit tempus porttitor.
+                        <button class="close">&times;</button>
+                    </div>
+                    <div class="tabs-wrapper">
+                        <h2>Traffic</h2>
+                        <ul class="tabs">
+                            <li><button>Hourly</button></li>
+                            <li><button>Daily</button></li>
+                            <li><button class="active">Weekly</button></li>
+                            <li><button>Monthly</button></li>
+                        </ul>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="traffic"></canvas>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Daily Traffic / Mobile Users -->
+            <div class="row">
+                <section class="col-2">
+                    <h2>Daily Traffic</h2>
+                    <div class="chart-container">
+                        <canvas id="daily-traffic"></canvas>
+                    </div>
+                </section>
+                <section class="col-2">
+                    <h2>Mobile Users</h2>
+                    <div class="chart-container">
+                        <canvas id="mobile-users"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Social Stats -->
+            
+            <!-- Social Stats -->
+            <section>
+                <div class="row">
+                    <div class="col-1">
+                        <h2>Social stats</h2>
+                        <div class="social">
+                            <div class="social-item">
+                                <div class="social-icon">
+                                    <img src="icons/icon-twitter.svg" alt="Twitter">
+                                </div>
+                                <div>
+                                    <h3>Twitter</h3>
+                                    <div class="social-count">10,345</div>
+                                </div>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon">
+                                    <img src="icons/icon-facebook.svg" alt="Facebook">
+                                </div>
+                                <div>
+                                    <h3>Facebook</h3>
+                                    <div class="social-count">8,739</div>
+                                </div>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon">
+                                    <img src="icons/icon-google-plus.svg" alt="Google+">
+                                </div>
+                                <div>
+                                    <h3>Google+</h3>
+                                    <div class="social-count">2,530</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Members / Recent Activity -->
+            <div class="row">
+                <section class="col-2">
+                    <h2>New Members</h2>
+                    <div class="list">
+                        <div class="list-item">
+                            <img class="rounded" src="img/60.jpg" alt="">
+                            <div>
+                                <h2>Victoria Chambers</h2>
+                                <small><a href="#">victoria.chambers80@example.com</a></small>
+                            </div>
+                            <div class="list-item-date">10/15/15</div>
+                        </div>
+                        <div class="list-item">
+                            <img class="rounded" src="img/35.jpg" alt="">
+                            <div>
+                                <h2>Dale Byrd</h2>
+                                <small><a href="#">dale.byrd52@example.com</a></small>
+                            </div>
+                            <div class="list-item-date">10/15/15</div>
+                        </div>
+                        <div class="list-item">
+                            <img class="rounded" src="img/36.jpg" alt="">
+                            <div>
+                                <h2>Dawn Wood</h2>
+                                <small><a href="#">dawn.wood16@example.com</a></small>
+                            </div>
+                            <div class="list-item-date">10/15/15</div>
+                        </div>
+                        <div class="list-item">
+                            <img class="rounded" src="img/58.jpg" alt="">
+                            <div>
+                                <h2>Dan Oliver</h2>
+                                <small><a href="#">dan.oliver82@example.com</a></small>
+                            </div>
+                            <div class="list-item-date">10/15/15</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-2">
+                    <h2>Recent Activity</h2>
+                    <div class="list">
+                        <a class="list-item" href="#">
+                            <img class="rounded" src="img/20.jpg" alt="">
+                            <div>
+                                <h2>Victoria Chambers commented on YourApp's SEO Tips</h2>
+                                <small>4 hours ago</small>
+                            </div>
+                            <span class="mdi mdi-chevron-right"></span>
+                        </a>
+                        <a class="list-item" href="#">
+                            <img class="rounded" src="img/65.jpg" alt="">
+                            <div>
+                                <h2>Dale Byrd like the post Facebook's Changes for 2016</h2>
+                                <small>5 hours ago</small>
+                            </div>
+                            <span class="mdi mdi-chevron-right"></span>
+                        </a>
+                        <a class="list-item" href="#">
+                            <img class="rounded" src="img/66.jpg" alt="">
+                            <div>
+                                <h2>Dawn Wood commented on Facebook's Changes for 2016</h2>
+                                <small>5 hours ago</small>
+                            </div>
+                            <span class="mdi mdi-chevron-right"></span>
+                        </a>
+                        <a class="list-item" href="#">
+                            <img class="rounded" src="img/79.jpg" alt="">
+                            <div>
+                                <h2>Dan Oliver posted Yourapp's SEO Tips</h2>
+                                <small>1 day ago</small>
+                            </div>
+                            <span class="mdi mdi-chevron-right"></span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Message User / Settings -->
+            <div class="row ttt">
+                <section class="col-2">
+                    <h2>Message User</h2>
+                    <form action="index.html" method="post" class="message-user" id="message-user">
+                        <input type="search" list="user-list" id="user-search" name="user_search" placeholder="Search for User">
+                        <datalist id="user-list"></datalist>
+                        <textarea id="user-message" name="user_message" placeholder="Message for User" rows="10"></textarea>
+                        <button class="btn" type="submit">Send</button>
+                    </form>
+                </section>
+                <section class="col-2">
+                    <h2>Settings</h2>
+                    <form action="index.html" method="post" class="settings">
+
+                        <div class="setting">
+                            Send Email Notifications
+                            <label class="switch">
+                                <input type="checkbox" id="notifications-email">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="setting">
+                            Set Profile to Public
+                            <label class="switch">
+                                <input type="checkbox" id="profile-public">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <label class="select">
+                            <select id="timezone" name="settings_timezone">
+                                <option value="" selected hidden disabled>Select Timezone</option>
+                            </select>
+                        </label>
+                        <div class="btn-group">
+                            <button class="btn" type="submit">Save</button>
+                            <button class="btn btn-cancel" type="reset">cancel</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            
+        </main>
+    </div> <!-- end .wrapper -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>    
+        // Bar chart
+        var chartBarId = document.getElementById("daily-traffic").getContext('2d');
+        var chartBar = new Chart(chartBarId, {
+            type: 'bar',
+            data: {
+                labels: ["S", "M", "T", "W", "T", "F", "S"],
+                datasets: [{
+                    label: 'Daily Traffic',
+                    data: [75, 87.5, 175, 125, 225, 187.5, 87.5],
+                    backgroundColor: 'rgba(115, 119, 191, 1)',
+                    hoverBackgroundColor: 'rgba(99,103,166,1)',
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        barPercentage: 0.4
+                    }]
+                }
+            }
+        });
+
+        // Doughnut chart
+        var chartDoughnutId = document.getElementById("mobile-users").getContext('2d');
+        var chartDoughnut = new Chart(chartDoughnutId, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    label: 'Mobile Users',
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        'rgba(116, 177, 191, 1)',
+                        'rgba(129, 201, 143, 1)',
+                        'rgba(115, 119, 191, 1)',
+                    ]
+                }],
+                labels: [
+                    'Phones',
+                    'Tablets',
+                    'Desktop'
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'right',
+                    fullWidth: true,
+                    labels: {
+                        boxWidth: 12,
+                    }
+                }
+            }
+        });      
+    </script>
+</body>
+</html>

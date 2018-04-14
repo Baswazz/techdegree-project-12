@@ -1,0 +1,36 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+  @include bg-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  text-align: center;
+  padding: em(14px) em(48px);
+  border: 0;
+  color: $white;
+  border-radius: $br--default;
+  text-transform: uppercase;
+  font-size: em(15px);
+  font-weight: $font-weight--bold;
+  display: block;
+  transition: opacity $transition-duration;
+  width: 100%;
+  margin-bottom: em(24px);
+  cursor: pointer;
+  &:hover {
+    opacity: .75;
+  }
+
+  @include mediaq(medium) {
+    width: auto;
+    display: inline-block;
+
+    &.theme__colors {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

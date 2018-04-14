@@ -1,0 +1,95 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM Selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media Queries
+
+@mixin mediaq($break) {
+  @if $break == "medium" {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`.";
+  }
+}
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+  & + & {
+   margin-left: $margin;
+   @content;
+  }
+}
+
+// Flexbox settings
+
+@mixin flexbox($direction: row, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $align;
+}
+
+// Generate modifier color classes
+
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+// Grid Columns
+     
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    
+    // Generate column modifier classes
+
+    &--#{$i} {
+      width: percentage($target / $context);
+
+      // Theme colors
+
+      &.theme__colors {
+        background-color: palette(grid-colors, $i);
+      }
+    }
+  }
+} 
+
+// Grid Colors
+     
+@mixin g-colors {
+  @for $i from 1 through $g-col-count {
+    
+    // Generate column modifier classes
+
+    &--#{$i} {
+      // Theme colors
+      
+      &.theme__colors {
+        background-color: palette(grid-colors, $i);
+      }
+    }
+  }
+} 

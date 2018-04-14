@@ -1,0 +1,28 @@
+// ==========================================================================
+// Img
+// ==========================================================================
+
+img {
+  max-width: 100%;
+  height: auto;
+  @include mediaq(medium) {
+	  margin-bottom: em($gutter--default);
+	}
+}
+
+.img {
+	@include m(logo) {
+		width: 162px;
+		@extend %centered;
+		margin-top: em($gutter--default * 2);
+	}
+
+	@include m(avatar) {
+		@extend %centered;
+	}
+
+  @include m(frame) {
+    border: 1px solid palette(grey, x-light);
+    padding: em(14px);
+  }
+}

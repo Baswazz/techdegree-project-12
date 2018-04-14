@@ -1,0 +1,38 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Headlines
+
+%headline-primary {
+  color: $color-primary;
+  font-size: em(32px);
+  font-weight: $font-weight--bold;
+  line-height: (18px / $base__font-size);
+  margin-left: em(8px);
+  margin-bottom: em(18px);
+}
+
+%headline-secondary {
+  font-size: em(18px);
+  font-weight: $font-weight--light;
+  color: palette(grey, light);
+  margin: em(27px) 0 em(27px);
+}
+
+// buttons
+
+%btn {
+  padding: 15px 30px;
+  border-radius: $br--default;
+  display: block;
+
+}
+
+%grid-theme-styles {
+  background-color: palette(grey, x-light);
+  border-radius: $br--default;
+  text-align: center;
+  font-weight: $font-weight--regular;
+  padding: em(10px) em(48px);
+}
